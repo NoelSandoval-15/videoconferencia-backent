@@ -1,0 +1,23 @@
+MIGRAR LA BASE DE DATOS 
+
+python manage.py makemigrations
+python manage.py migrate
+
+CREAMOS UN SUPER USUARIO
+python manage.py createsuperuser
+
+
+superusuario
+admin@gmail.com 
+password
+
+para poner mas horas a un token 
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(hours=8),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
+    "ROTATE_REFRESH_TOKENS": False,
+    "BLACKLIST_AFTER_ROTATION": False,
+}
+
+activar el enotnrno virtual 
+.\.venv\Scripts\Activate.ps1
