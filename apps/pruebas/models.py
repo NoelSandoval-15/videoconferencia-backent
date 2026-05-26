@@ -43,6 +43,8 @@ class Prueba(models.Model):
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_actualizacion = models.DateTimeField(auto_now=True)
 
+    objects = models.Manager()
+
     class Meta:
         ordering = ["titulo"]
         verbose_name = "Prueba"
@@ -81,6 +83,8 @@ class PruebaEntrevista(models.Model):
     observaciones = models.TextField(blank=True, null=True)
     fecha_asignacion = models.DateTimeField(auto_now_add=True)
     fecha_actualizacion = models.DateTimeField(auto_now=True)
+
+    objects = models.Manager()
 
     class Meta:
         ordering = ["-fecha_asignacion"]
