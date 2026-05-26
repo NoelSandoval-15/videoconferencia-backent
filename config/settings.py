@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     "apps.entrevistas",
     "apps.pruebas",
     "apps.sesiones",
+    "apps.alertas",
+    "apps.reportes",
 ]
 
 MIDDLEWARE = [
