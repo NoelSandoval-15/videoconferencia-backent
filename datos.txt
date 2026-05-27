@@ -21,3 +21,34 @@ SIMPLE_JWT = {
 
 activar el enotnrno virtual 
 .\.venv\Scripts\Activate.ps1
+
+-----------------------------------------------------------
+
+invitados 
+nombre y email par enviar el correo y el nombre a que se le enviara el link de acceso
+llamadas la url de la invitacion
+
+pasar el dato de la invitacion a la funcion de validacion de token
+LA ENTREVISTA ES LA QUE ESTOY CONFIGURANDO 
+
+jalar la informacion de la entrevista y guardarla en la base de datos
+entrevista = Entrevista.objects.create(
+    titulo="entrevista",
+    descripcion="entrevista",
+    creada_por=usuario,
+    estado=Entrevista.Estado.BORRADOR,
+    fecha_programada=datetime.now(),
+)
+
+jalamos la id del enviroment y la id de la entrevista
+sesion = Sesion.objects.create(
+    entrevista=entrevista,
+    creada_por=usuario,
+    room_name=uuid.uuid4(),
+    estado=Sesion.Estado.ACTIVA,
+)
+luego recien lo guardamos en la base de datos
+sesion.save()
+
+generar ractimacnet una id lo contactamos con el admin y lo guardamos en la base de datos
+
