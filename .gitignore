@@ -8,3 +8,25 @@ staticfiles/
 .venv/
 venv/
 env/
+
+# ===== EXCLUIR ARCHIVOS DE DOCUMENTACIÓN Y CONFIGURACIÓN =====
+# Archivos Markdown (documentación local)
+*.md
+
+# Archivos de texto (excepto requirements.txt)
+*.txt
+!requirements.txt
+
+# Archivos de configuración sensible
+config-email.txt
+datos.txt
+*.log
+.DS_Store
+.idea/
+*.swp
+*.swo
+
+# Archivos temporales
+*.tmp
+*~
+.*.swp

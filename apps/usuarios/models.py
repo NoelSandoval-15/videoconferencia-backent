@@ -3,10 +3,8 @@ from django.db import models
 
 class Usuario(models.Model):
     class Rol(models.TextChoices):
-        ADMIN = "admin", "Administrador"
-        RECLUTADOR = "reclutador", "Reclutador"
-        ENTREVISTADOR = "entrevistador", "Entrevistador"
-        EVALUADOR = "evaluador", "Evaluador"
+        SUPERVISOR = "supervisor", "Supervisor"
+        INVITADO = "invitado", "Invitado"
 
     class Estado(models.TextChoices):
         ACTIVO = "activo", "Activo"

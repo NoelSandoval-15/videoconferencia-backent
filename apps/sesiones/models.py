@@ -5,7 +5,8 @@ from django.db import models
 
 class Sesion(models.Model):
     class Estado(models.TextChoices):
-        ACTIVA = "activa", "Activa"
+        ACTIVA = "activa", "Activa (preparación)"
+        INICIADA = "iniciada", "Iniciada (en curso)"
         FINALIZADA = "finalizada", "Finalizada"
 
     entrevista = models.ForeignKey(
@@ -24,8 +25,14 @@ class Sesion(models.Model):
         choices=Estado.choices,
         default=Estado.ACTIVA,
     )
+    observaciones_internas = models.TextField(
+        blank=True,
+        null=True,
+        help_text="Observaciones internas del evaluador",
+    )
     fecha_inicio = models.DateTimeField(auto_now_add=True)
     fecha_fin = models.DateTimeField(blank=True, null=True)
+    fecha_actualizacion = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ["-fecha_inicio"]

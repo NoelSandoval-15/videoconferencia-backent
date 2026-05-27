@@ -52,3 +52,8 @@ sesion.save()
 
 generar ractimacnet una id lo contactamos con el admin y lo guardamos en la base de datos
 
+------------------
+
+extraer los cambios de github a mi proyecto 
+git checkout main
+git pull origin main
